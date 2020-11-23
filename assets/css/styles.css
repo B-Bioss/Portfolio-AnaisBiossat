@@ -1,0 +1,100 @@
+* {
+    font-family: 'Didact Gothic', sans-serif;
+    font-style: bold;
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0;
+    color: #ebebe3;
+}
+p {
+    font-family: 'Glegoo', serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #ebebe3;
+
+}
+body {
+    cursor: none;
+}
+#home {
+    background-image: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.05)),
+                    url(../images/Background-image.jpg) !important;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    color: #ebebe3;
+}
+.bg-pink {
+    background-color: #fdcfdf;
+    margin: 0;
+}
+#logo-blanc {
+    max-width: 10%;
+	height: auto;
+}
+#main {
+    background-color: #2b2b28;
+}
+footer div div a {  
+    outline: none;
+    font-size: 10px;
+    color: #ebebe3;
+    text-decoration: none;
+} 
+footer div div a:hover {  
+    outline: none;
+    font-size: 10px;
+    color: #fdcfdf;
+    text-decoration: none;
+} 
+
+
+/*Cursor*/
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 3px dotted #ebebe3;
+    border-radius: 50%;
+    position: absolute;
+    animation: Anim1 1s infinite alternate;
+    pointer-events: none;
+}
+.cursor::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color:#ff79a8;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.expand {
+    animation: Anim2 .5s;
+    background: #ff79a8;
+    border: 2px solid #ff79a8;
+    pointer-events: none;
+}
+@keyframes Anim1 {
+from {
+    transform: scale(1) rotate(0deg);
+}
+to {
+    transform: scale(0.7) rotate(190deg);
+}
+}
+@keyframes Anim2 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
